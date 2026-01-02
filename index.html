@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speed Typer - Test Your Typing Speed</title>
+    <meta name="description" content="Test how fast you can type A-Z and 1-9 with millisecond precision timing">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="background-gradient"></div>
+        
+        <header>
+            <h1 class="title">⚡ Speed Typer</h1>
+            <p class="subtitle">Test your typing speed with millisecond precision</p>
+        </header>
+
+        <div class="mode-selector">
+            <button class="mode-btn active" data-mode="az" id="azModeBtn">
+                <span class="mode-icon">🔤</span>
+                <span class="mode-text">A → Z</span>
+            </button>
+            <button class="mode-btn" data-mode="19" id="numModeBtn">
+                <span class="mode-icon">🔢</span>
+                <span class="mode-text">1 → 9</span>
+            </button>
+        </div>
+
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-label">Current Time</div>
+                <div class="stat-value" id="currentTime">0.000s</div>
+            </div>
+            <div class="stat-card highlight">
+                <div class="stat-label">Best Time (Session)</div>
+                <div class="stat-value" id="bestTime">--</div>
+            </div>
+        </div>
+
+        <div class="game-area">
+            <div class="instruction" id="instruction">Press any key to start</div>
+            
+            <div class="progress-display" id="progressDisplay">
+                <div class="typed-chars" id="typedChars"></div>
+                <div class="current-char" id="currentChar">A</div>
+                <div class="remaining-chars" id="remainingChars">BCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+            </div>
+
+            <div class="timer" id="timer">0.000</div>
+
+            <div class="input-indicator" id="inputIndicator">
+                <div class="indicator-pulse"></div>
+                <span>Waiting for input...</span>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="control-btn reset-btn" id="resetBtn">
+                <span>↻</span> Reset
+            </button>
+        </div>
+
+        <div class="completion-modal" id="completionModal">
+            <div class="modal-content">
+                <div class="modal-icon">🎉</div>
+                <h2 class="modal-title">Completed!</h2>
+                <div class="modal-time" id="modalTime">0.000s</div>
+                <div class="modal-message" id="modalMessage"></div>
+                <button class="modal-btn" id="modalCloseBtn">Try Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
